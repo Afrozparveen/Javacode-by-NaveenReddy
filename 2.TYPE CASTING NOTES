@@ -1,0 +1,105 @@
+1. Type Casting::
+Type casting is the process of converting a variable from one data type to another explicitly by the programmer. In Java, there are two types of casting:
+
+public class TypeCastingExample {
+    public static void main(String[] args) {
+        // Widening (Implicit) Casting (small size to large size)
+        int num = 100;
+        double doubleNum = num;  // int to double
+
+        System.out.println("Widening Casting:");
+        System.out.println("int value: " + num);
+        System.out.println("double value: " + doubleNum);
+
+        // Narrowing (Explicit) Casting (large size to small size)
+        double decimal = 99.99;
+        int intValue = (int) decimal;  // double to int
+
+        System.out.println("\nNarrowing Casting:");
+        System.out.println("double value: " + decimal);
+        System.out.println("int value (after casting): " + intValue);
+    }
+}
+OUTPUT:::::::::::::::
+
+Widening Casting:
+int value: 100
+double value: 100.0
+
+Narrowing Casting:
+double value: 99.99
+int value (after casting): 99
+
+
+2. Type Conversion
+Type conversion occurs automatically when a value of one type is assigned to another type, provided that there is no data loss. This happens mostly in arithmetic operations.
+
+Example of Type Conversion:
+
+public class TypeConversionExample {
+    public static void main(String[] args) {
+        int intVal = 50;
+        double doubleVal = intVal;  // int is automatically converted to double
+
+        System.out.println("Type Conversion Example:");
+        System.out.println("int value: " + intVal);
+        System.out.println("double value: " + doubleVal);
+    }
+}
+Output:
+
+Type Conversion Example:
+int value: 50
+double value: 50.0
+This happens because double has a larger range than int, so Java automatically converts int to double without requiring explicit casting.
+
+3. Type Promotion
+Type promotion occurs automatically when performing operations on smaller data types like byte, short, or char. Java promotes these types to int before performing operations.
+
+Example of Type Promotion:
+
+public class TypePromotionExample {
+    public static void main(String[] args) {
+        byte byteVal1 = 10;
+        byte byteVal2 = 20;
+
+        // Automatic promotion to int
+        int sum = byteVal1 + byteVal2;
+
+        System.out.println("Type Promotion Example:");
+        System.out.println("Sum of bytes (promoted to int): " + sum);
+
+        char char1 = 'A';  // ASCII value of 'A' is 65
+        char char2 = 'B';  // ASCII value of 'B' is 66
+
+        // Automatic promotion to int
+        int charSum = char1 + char2;
+
+        System.out.println("Sum of characters (ASCII values): " + charSum);
+    }
+}
+Output:
+
+Type Promotion Example:
+Sum of bytes (promoted to int): 30
+Sum of characters (ASCII values): 131
+
+Here, byteVal1 and byteVal2 are byte types, but their sum is automatically promoted to int.
+Similarly, char1 and char2 are characters, but their ASCII values are used in the addition, promoting them to int.
+Summary of Differences
+Concept	Definition	Example
+Type Casting	Manually converting a variable from one type to another.	(int) 99.99 converts double to int.
+Type Conversion	Automatic conversion between compatible types (widening conversion).	int x = 10; double y = x; (int → double)
+Type Promotion	Automatic promotion of smaller data types (byte, short, char) to int in expressions.	byte b1 = 10, b2 = 20; int sum = b1 + b2;
+
+
+
+
+
+
+
+
+
+
+
+
