@@ -1,3 +1,15 @@
+for Loop in Java::::::::::::::::
+	A for loop is a control flow statement used when the number of iterations is known beforehand. It provides a concise way to iterate over a block of code.
+
+Syntax of for Loop::::
+	for (initialization; condition; update) {
+    	// Code to execute
+	}
+
+Initialization → Initializes a loop control variable (executed once).
+Condition → Checks if the loop should continue (evaluated before each iteration).
+Update → Modifies the loop variable (executed after each iteration).
+	
 public class hello {
 
 	public static void main(String[] args) {
