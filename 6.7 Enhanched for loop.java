@@ -1,3 +1,79 @@
+Enhanced For Loop in Java (For-Each Loop)
+	The enhanced for loop, also called the for-each loop, is a simpler way to iterate over arrays and collections in Java.
+
+1. Syntax of Enhanced For Loop
+for (dataType variable : arrayName) {
+    // Code to execute
+}
+
+dataType: The type of elements in the array.
+variable: A temporary variable that stores each element.
+arrayName: The array or collection to iterate over.
+
+2. Example: Using Enhanced For Loop with Arrays
+public class EnhancedForLoopExample {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        // Using enhanced for loop
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+}
+Output:
+10
+20
+30
+40
+50
+
+3. Using Enhanced For Loop with Different Data Types
+A. String Array Example
+public class StringForEach {
+    public static void main(String[] args) {
+        String[] names = {"Alice", "Bob", "Charlie"};
+
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+}
+Output:
+Alice
+Bob
+Charlie
+
+B. Double Array Example
+double[] prices = {10.99, 20.49, 30.75};
+
+for (double price : prices) {
+    System.out.println(price);
+}
+
+4. Enhanced For Loop with 2D Arrays
+	You can use a nested enhanced for loop to iterate over 2D arrays.
+public class ForEach2DArray {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for (int[] row : matrix) {  // Iterating through rows
+            for (int num : row) {  // Iterating through columns
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+Output:
+1 2 3
+4 5 6
+7 8 9
+
 class Student
 {
 	int rollno;
